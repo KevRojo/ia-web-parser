@@ -1,0 +1,64 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ia-web-parser"
+version = "0.1.0"
+description = "Turn any AI web-chat provider into a tool-capable streaming API"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [
+    { name = "KevRojo" },
+]
+keywords = [
+    "ai", "llm", "web-scraping", "playwright", "claude", "kimi", "gemini",
+    "deepseek", "qwen", "tool-calling", "agent", "automation",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "requests>=2.28.0",
+]
+
+[project.optional-dependencies]
+harvester = [
+    "playwright>=1.40.0",
+]
+dev = [
+    "pytest>=7.0",
+    "black>=23.0",
+    "mypy>=1.0",
+]
+
+[project.scripts]
+ia-web-harvest = "ia_web_parser.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/KevRojo/ia-web-parser"
+Repository = "https://github.com/KevRojo/ia-web-parser"
+Issues = "https://github.com/KevRojo/ia-web-parser/issues"
+Falcon = "https://github.com/KevRojo/Falcon"
+
+[tool.hatch.build.targets.wheel]
+packages = ["ia_web_parser"]
+
+[tool.black]
+line-length = 120
+target-version = ['py310']
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
