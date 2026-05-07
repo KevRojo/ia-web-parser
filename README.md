@@ -18,7 +18,7 @@ Most AI providers charge for API access while their **web UIs are free with a su
 2. **Streams** chat responses back to your code with the same Bearer/cookie auth the browser uses.
 3. **Injects tool manifests** into the prompt and **parses `<tool_call>` blocks** out of the model output, giving you the same tool-calling loop a native API would — but for providers that don't expose one publicly.
 
-Built originally for [**Falcon**](https://github.com/KevRojo/Falcon) (`pip install falcon-agent`) — the multi-provider AI CLI that pioneered tool-capable web providers — and now extracted as a standalone library so any Python project can use it.
+Built originally for [**dulus**](https://github.com/KevRojo/dulus) (`pip install dulus`) — the multi-provider AI CLI that pioneered tool-capable web providers — and now extracted as a standalone library so any Python project can use it.
 
 ## Supported providers
 
@@ -100,14 +100,14 @@ Log in once. Re-runs reuse the same profile — never re-authenticate.
 
 ## Want the full agent experience?
 
-`ia-web-parser` is the **library**. If you want the **whole CLI** — REPL, slash commands, sub-agents, MemPalace, voice, TTS, Mesa Redonda, 27 built-in tools, MCP, plugins — that's [Falcon](https://github.com/KevRojo/Falcon):
+`ia-web-parser` is the **library**. If you want the **whole CLI** — REPL, slash commands, sub-agents, MemPalace, voice, TTS, Mesa Redonda, 27 built-in tools, MCP, plugins — that's [dulus](https://github.com/KevRojo/dulus):
 
 ```bash
-pip install falcon-agent
-falcon
+pip install dulus-agent
+dulus
 ```
 
-Falcon ships `ia-web-parser` integrated, plus 11 cloud APIs (Anthropic, OpenAI, Gemini, NVIDIA's free 14-model tier, Ollama, custom endpoints) and the full agentic loop.
+dulus ships `ia-web-parser` integrated, plus 11 cloud APIs (Anthropic, OpenAI, Gemini, NVIDIA's free 14-model tier, Ollama, custom endpoints) and the full agentic loop.
 
 ## Why this exists
 
