@@ -103,7 +103,7 @@ Log in once. Re-runs reuse the same profile — never re-authenticate.
 `ia-web-parser` is the **library**. If you want the **whole CLI** — REPL, slash commands, sub-agents, MemPalace, voice, TTS, Mesa Redonda, 27 built-in tools, MCP, plugins — that's [dulus](https://github.com/KevRojo/dulus):
 
 ```bash
-pip install dulus-agent
+pip install dulus
 dulus
 ```
 
